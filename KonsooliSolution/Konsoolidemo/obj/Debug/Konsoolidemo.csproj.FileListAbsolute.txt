@@ -1,0 +1,12 @@
+C:\Users\kkorvel\Desktop\KonsooliSolution\Konsoolidemo\bin\Debug\Konsoolidemo.exe.config
+C:\Users\kkorvel\Desktop\KonsooliSolution\Konsoolidemo\bin\Debug\Konsoolidemo.exe
+C:\Users\kkorvel\Desktop\KonsooliSolution\Konsoolidemo\bin\Debug\Konsoolidemo.pdb
+C:\Users\kkorvel\Desktop\KonsooliSolution\Konsoolidemo\obj\Debug\Konsoolidemo.csprojResolveAssemblyReference.cache
+C:\Users\kkorvel\Desktop\KonsooliSolution\Konsoolidemo\obj\Debug\Konsoolidemo.exe
+C:\Users\kkorvel\Desktop\KonsooliSolution\Konsoolidemo\obj\Debug\Konsoolidemo.pdb
+C:\Users\kkorvel\Desktop\CSharp\KonsooliSolution\Konsoolidemo\bin\Debug\Konsoolidemo.exe.config
+C:\Users\kkorvel\Desktop\CSharp\KonsooliSolution\Konsoolidemo\obj\Debug\Konsoolidemo.exe
+C:\Users\kkorvel\Desktop\CSharp\KonsooliSolution\Konsoolidemo\obj\Debug\Konsoolidemo.pdb
+C:\Users\kkorvel\Desktop\CSharp\KonsooliSolution\Konsoolidemo\bin\Debug\Konsoolidemo.exe
+C:\Users\kkorvel\Desktop\CSharp\KonsooliSolution\Konsoolidemo\bin\Debug\Konsoolidemo.pdb
+C:\Users\kkorvel\Desktop\CSharp\KonsooliSolution\Konsoolidemo\obj\Debug\Konsoolidemo.csprojResolveAssemblyReference.cache

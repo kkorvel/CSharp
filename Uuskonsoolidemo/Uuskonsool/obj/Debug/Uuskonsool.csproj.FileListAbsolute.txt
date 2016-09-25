@@ -1,0 +1,6 @@
+C:\Users\kkorvel\Desktop\Uuskonsoolidemo\Uuskonsool\bin\Debug\Uuskonsool.exe.config
+C:\Users\kkorvel\Desktop\Uuskonsoolidemo\Uuskonsool\bin\Debug\Uuskonsool.exe
+C:\Users\kkorvel\Desktop\Uuskonsoolidemo\Uuskonsool\bin\Debug\Uuskonsool.pdb
+C:\Users\kkorvel\Desktop\Uuskonsoolidemo\Uuskonsool\obj\Debug\Uuskonsool.csprojResolveAssemblyReference.cache
+C:\Users\kkorvel\Desktop\Uuskonsoolidemo\Uuskonsool\obj\Debug\Uuskonsool.exe
+C:\Users\kkorvel\Desktop\Uuskonsoolidemo\Uuskonsool\obj\Debug\Uuskonsool.pdb

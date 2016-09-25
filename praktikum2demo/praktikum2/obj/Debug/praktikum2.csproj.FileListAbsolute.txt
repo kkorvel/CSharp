@@ -1,0 +1,10 @@
+c:\users\kkorvel\documents\visual studio 2015\Projects\praktikum2demo\praktikum2\bin\Debug\praktikum2.exe.config
+C:\Users\kkorvel\Desktop\CSharp\praktikum2demo\praktikum2\bin\Debug\praktikum2.exe.config
+C:\Users\kkorvel\Desktop\CSharp\praktikum2demo\praktikum2\obj\Debug\praktikum2.csprojResolveAssemblyReference.cache
+C:\Users\kkorvel\Desktop\CSharp\praktikum2demo\praktikum2\bin\Debug\praktikum2.exe
+C:\Users\kkorvel\Desktop\CSharp\praktikum2demo\praktikum2\bin\Debug\praktikum2.pdb
+C:\Users\kkorvel\Desktop\CSharp\praktikum2demo\praktikum2\obj\Debug\praktikum2.exe
+C:\Users\kkorvel\Desktop\CSharp\praktikum2demo\praktikum2\obj\Debug\praktikum2.pdb
+H:\CSharp\praktikum2demo\praktikum2\bin\Debug\praktikum2.exe.config
+H:\CSharp\praktikum2demo\praktikum2\obj\Debug\praktikum2.exe
+H:\CSharp\praktikum2demo\praktikum2\obj\Debug\praktikum2.pdb

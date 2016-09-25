@@ -1,0 +1,11 @@
+C:\Users\kkorvel\Desktop\CSharp\praktikum3demo\praktikum3\obj\Debug\praktikum3.exe
+C:\Users\kkorvel\Desktop\CSharp\praktikum3demo\praktikum3\obj\Debug\praktikum3.pdb
+C:\Users\kkorvel\Desktop\CSharp\praktikum3demo\praktikum3\bin\Debug\praktikum3.exe.config
+C:\Users\kkorvel\Desktop\CSharp\praktikum3demo\praktikum3\bin\Debug\praktikum3.exe
+C:\Users\kkorvel\Desktop\CSharp\praktikum3demo\praktikum3\bin\Debug\praktikum3.pdb
+C:\Users\X555ln-\Documents\Visual Studio 2015\Projects\praktikum3demo\praktikum3\bin\Debug\praktikum3.exe.config
+C:\Users\X555ln-\Documents\Visual Studio 2015\Projects\praktikum3demo\praktikum3\obj\Debug\praktikum3.exe
+C:\Users\X555ln-\Documents\Visual Studio 2015\Projects\praktikum3demo\praktikum3\obj\Debug\praktikum3.pdb
+C:\Users\X555ln-\Documents\Visual Studio 2015\Projects\praktikum3demo\praktikum3\bin\Debug\praktikum3.exe
+C:\Users\X555ln-\Documents\Visual Studio 2015\Projects\praktikum3demo\praktikum3\bin\Debug\praktikum3.pdb
+C:\Users\X555ln-\Documents\Visual Studio 2015\Projects\praktikum3demo\praktikum3\obj\Debug\praktikum4.csprojResolveAssemblyReference.cache
