@@ -1,0 +1,13 @@
+C:\Users\kkorvel\Desktop\CSharp\Praktikum05wpfdemo\Praktikum05wpf\bin\Debug\Praktikum05wpf.exe.config
+C:\Users\kkorvel\Desktop\CSharp\Praktikum05wpfdemo\Praktikum05wpf\bin\Debug\Praktikum05wpf.exe
+C:\Users\kkorvel\Desktop\CSharp\Praktikum05wpfdemo\Praktikum05wpf\bin\Debug\Praktikum05wpf.pdb
+C:\Users\kkorvel\Desktop\CSharp\Praktikum05wpfdemo\Praktikum05wpf\obj\Debug\MainWindow.g.cs
+C:\Users\kkorvel\Desktop\CSharp\Praktikum05wpfdemo\Praktikum05wpf\obj\Debug\App.g.cs
+C:\Users\kkorvel\Desktop\CSharp\Praktikum05wpfdemo\Praktikum05wpf\obj\Debug\Praktikum05wpf_MarkupCompile.cache
+C:\Users\kkorvel\Desktop\CSharp\Praktikum05wpfdemo\Praktikum05wpf\obj\Debug\Praktikum05wpf_MarkupCompile.lref
+C:\Users\kkorvel\Desktop\CSharp\Praktikum05wpfdemo\Praktikum05wpf\obj\Debug\MainWindow.baml
+C:\Users\kkorvel\Desktop\CSharp\Praktikum05wpfdemo\Praktikum05wpf\obj\Debug\Praktikum05wpf.g.resources
+C:\Users\kkorvel\Desktop\CSharp\Praktikum05wpfdemo\Praktikum05wpf\obj\Debug\Praktikum05wpf.Properties.Resources.resources
+C:\Users\kkorvel\Desktop\CSharp\Praktikum05wpfdemo\Praktikum05wpf\obj\Debug\Praktikum05wpf.csproj.GenerateResource.Cache
+C:\Users\kkorvel\Desktop\CSharp\Praktikum05wpfdemo\Praktikum05wpf\obj\Debug\Praktikum05wpf.exe
+C:\Users\kkorvel\Desktop\CSharp\Praktikum05wpfdemo\Praktikum05wpf\obj\Debug\Praktikum05wpf.pdb
