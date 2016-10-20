@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LoenguDemoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Inimene">
+    <Key>
+      <PropertyRef Name="InimeneID" />
+    </Key>
+    <Property Name="InimeneID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Eesnimi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Perenimi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Kontakt" Relationship="LoenguDemoModel.FK_Kontakt_Inimene" FromRole="Inimene" ToRole="Kontakt" />
+  </EntityType>
+  <EntityContainer Name="LoenguDemoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Inimene" EntityType="Self.Inimene" />
+    <EntitySet Name="Kontakt" EntityType="LoenguDemoModel.Kontakt" />
+    <EntitySet Name="KontaktiTyyp" EntityType="LoenguDemoModel.KontaktiTyyp" />
+    <AssociationSet Name="FK_Kontakt_Inimene" Association="LoenguDemoModel.FK_Kontakt_Inimene">
+      <End Role="Inimene" EntitySet="Inimene" />
+      <End Role="Kontakt" EntitySet="Kontakt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kontakt_KontaktiTyyp" Association="LoenguDemoModel.FK_Kontakt_KontaktiTyyp">
+      <End Role="KontaktiTyyp" EntitySet="KontaktiTyyp" />
+      <End Role="Kontakt" EntitySet="Kontakt" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Kontakt">
+    <Key>
+      <PropertyRef Name="KontaktId" />
+    </Key>
+    <Property Name="KontaktId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InimeneId" Type="Int32" Nullable="false" />
+    <Property Name="KontaktiTyypId" Type="Int32" Nullable="false" />
+    <Property Name="Vaartus" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Inimene" Relationship="LoenguDemoModel.FK_Kontakt_Inimene" FromRole="Kontakt" ToRole="Inimene" />
+    <NavigationProperty Name="KontaktiTyyp" Relationship="LoenguDemoModel.FK_Kontakt_KontaktiTyyp" FromRole="Kontakt" ToRole="KontaktiTyyp" />
+  </EntityType>
+  <EntityType Name="KontaktiTyyp">
+    <Key>
+      <PropertyRef Name="KontaktiTyypId" />
+    </Key>
+    <Property Name="KontaktiTyypId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nimi" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Kontakt" Relationship="LoenguDemoModel.FK_Kontakt_KontaktiTyyp" FromRole="KontaktiTyyp" ToRole="Kontakt" />
+  </EntityType>
+  <Association Name="FK_Kontakt_Inimene">
+    <End Type="LoenguDemoModel.Inimene" Role="Inimene" Multiplicity="1" />
+    <End Type="LoenguDemoModel.Kontakt" Role="Kontakt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inimene">
+        <PropertyRef Name="InimeneID" />
+      </Principal>
+      <Dependent Role="Kontakt">
+        <PropertyRef Name="InimeneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kontakt_KontaktiTyyp">
+    <End Type="LoenguDemoModel.KontaktiTyyp" Role="KontaktiTyyp" Multiplicity="1" />
+    <End Type="LoenguDemoModel.Kontakt" Role="Kontakt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KontaktiTyyp">
+        <PropertyRef Name="KontaktiTyypId" />
+      </Principal>
+      <Dependent Role="Kontakt">
+        <PropertyRef Name="KontaktiTyypId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

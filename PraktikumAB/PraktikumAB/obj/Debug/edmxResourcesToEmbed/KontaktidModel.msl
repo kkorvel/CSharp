@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KontaktiRaamatModelStoreContainer" CdmEntityContainer="KontaktiRaamatEntities">
+    <EntitySetMapping Name="Inimesed">
+      <EntityTypeMapping TypeName="KontaktiRaamatModel.Inimesed">
+        <MappingFragment StoreEntitySet="Inimesed">
+          <ScalarProperty Name="InimeneId" ColumnName="InimeneId" />
+          <ScalarProperty Name="Eesnimi" ColumnName="Eesnimi" />
+          <ScalarProperty Name="Perenimi" ColumnName="Perenimi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KontaktiTyyp">
+      <EntityTypeMapping TypeName="KontaktiRaamatModel.KontaktiTyyp">
+        <MappingFragment StoreEntitySet="KontaktiTyyp">
+          <ScalarProperty Name="KontaktiTyypId" ColumnName="KontaktiTyypId" />
+          <ScalarProperty Name="Nimi" ColumnName="Nimi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kontaktid">
+      <EntityTypeMapping TypeName="KontaktiRaamatModel.Kontaktid">
+        <MappingFragment StoreEntitySet="Kontaktid">
+          <ScalarProperty Name="Vaartus" ColumnName="Vaartus" />
+          <ScalarProperty Name="KontaktiTyypId" ColumnName="KontaktiTyypId" />
+          <ScalarProperty Name="InimeneId" ColumnName="InimeneId" />
+          <ScalarProperty Name="KontaktId1" ColumnName="KontaktId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

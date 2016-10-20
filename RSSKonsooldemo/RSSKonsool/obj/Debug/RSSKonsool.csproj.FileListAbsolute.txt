@@ -1,0 +1,6 @@
+C:\Users\kkorvel\Desktop\CSharp\RSSKonsooldemo\RSSKonsool\bin\Debug\RSSKonsool.exe.config
+C:\Users\kkorvel\Desktop\CSharp\RSSKonsooldemo\RSSKonsool\bin\Debug\RSSKonsool.exe
+C:\Users\kkorvel\Desktop\CSharp\RSSKonsooldemo\RSSKonsool\bin\Debug\RSSKonsool.pdb
+C:\Users\kkorvel\Desktop\CSharp\RSSKonsooldemo\RSSKonsool\obj\Debug\RSSKonsool.csprojResolveAssemblyReference.cache
+C:\Users\kkorvel\Desktop\CSharp\RSSKonsooldemo\RSSKonsool\obj\Debug\RSSKonsool.exe
+C:\Users\kkorvel\Desktop\CSharp\RSSKonsooldemo\RSSKonsool\obj\Debug\RSSKonsool.pdb

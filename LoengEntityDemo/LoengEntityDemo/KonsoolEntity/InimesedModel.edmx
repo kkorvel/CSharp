@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="LoenguDemoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Inimene">
+          <Key>
+            <PropertyRef Name="InimeneID" />
+          </Key>
+          <Property Name="InimeneID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Eesnimi" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Perenimi" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Kontakt">
+          <Key>
+            <PropertyRef Name="KontaktId" />
+          </Key>
+          <Property Name="KontaktId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InimeneId" Type="int" Nullable="false" />
+          <Property Name="KontaktiTyypId" Type="int" Nullable="false" />
+          <Property Name="Vaartus" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KontaktiTyyp">
+          <Key>
+            <PropertyRef Name="KontaktiTyypId" />
+          </Key>
+          <Property Name="KontaktiTyypId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nimi" Type="nvarchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Kontakt_Inimene">
+          <End Role="Inimene" Type="Self.Inimene" Multiplicity="1" />
+          <End Role="Kontakt" Type="Self.Kontakt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Inimene">
+              <PropertyRef Name="InimeneID" />
+            </Principal>
+            <Dependent Role="Kontakt">
+              <PropertyRef Name="InimeneId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Kontakt_KontaktiTyyp">
+          <End Role="KontaktiTyyp" Type="Self.KontaktiTyyp" Multiplicity="1" />
+          <End Role="Kontakt" Type="Self.Kontakt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KontaktiTyyp">
+              <PropertyRef Name="KontaktiTyypId" />
+            </Principal>
+            <Dependent Role="Kontakt">
+              <PropertyRef Name="KontaktiTyypId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="LoenguDemoModelStoreContainer">
+          <EntitySet Name="Inimene" EntityType="Self.Inimene" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kontakt" EntityType="Self.Kontakt" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KontaktiTyyp" EntityType="Self.KontaktiTyyp" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Kontakt_Inimene" Association="Self.FK_Kontakt_Inimene">
+            <End Role="Inimene" EntitySet="Inimene" />
+            <End Role="Kontakt" EntitySet="Kontakt" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Kontakt_KontaktiTyyp" Association="Self.FK_Kontakt_KontaktiTyyp">
+            <End Role="KontaktiTyyp" EntitySet="KontaktiTyyp" />
+            <End Role="Kontakt" EntitySet="Kontakt" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LoenguDemoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Inimene">
+          <Key>
+            <PropertyRef Name="InimeneID" />
+          </Key>
+          <Property Name="InimeneID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Eesnimi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Perenimi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Kontakt" Relationship="LoenguDemoModel.FK_Kontakt_Inimene" FromRole="Inimene" ToRole="Kontakt" />
+        </EntityType>
+        <EntityContainer Name="LoenguDemoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Inimene" EntityType="Self.Inimene" />
+          <EntitySet Name="Kontakt" EntityType="LoenguDemoModel.Kontakt" />
+          <EntitySet Name="KontaktiTyyp" EntityType="LoenguDemoModel.KontaktiTyyp" />
+          <AssociationSet Name="FK_Kontakt_Inimene" Association="LoenguDemoModel.FK_Kontakt_Inimene">
+            <End Role="Inimene" EntitySet="Inimene" />
+            <End Role="Kontakt" EntitySet="Kontakt" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Kontakt_KontaktiTyyp" Association="LoenguDemoModel.FK_Kontakt_KontaktiTyyp">
+            <End Role="KontaktiTyyp" EntitySet="KontaktiTyyp" />
+            <End Role="Kontakt" EntitySet="Kontakt" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Kontakt">
+          <Key>
+            <PropertyRef Name="KontaktId" />
+          </Key>
+          <Property Name="KontaktId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InimeneId" Type="Int32" Nullable="false" />
+          <Property Name="KontaktiTyypId" Type="Int32" Nullable="false" />
+          <Property Name="Vaartus" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Inimene" Relationship="LoenguDemoModel.FK_Kontakt_Inimene" FromRole="Kontakt" ToRole="Inimene" />
+          <NavigationProperty Name="KontaktiTyyp" Relationship="LoenguDemoModel.FK_Kontakt_KontaktiTyyp" FromRole="Kontakt" ToRole="KontaktiTyyp" />
+        </EntityType>
+        <EntityType Name="KontaktiTyyp">
+          <Key>
+            <PropertyRef Name="KontaktiTyypId" />
+          </Key>
+          <Property Name="KontaktiTyypId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nimi" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Kontakt" Relationship="LoenguDemoModel.FK_Kontakt_KontaktiTyyp" FromRole="KontaktiTyyp" ToRole="Kontakt" />
+        </EntityType>
+        <Association Name="FK_Kontakt_Inimene">
+          <End Type="LoenguDemoModel.Inimene" Role="Inimene" Multiplicity="1" />
+          <End Type="LoenguDemoModel.Kontakt" Role="Kontakt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Inimene">
+              <PropertyRef Name="InimeneID" />
+            </Principal>
+            <Dependent Role="Kontakt">
+              <PropertyRef Name="InimeneId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Kontakt_KontaktiTyyp">
+          <End Type="LoenguDemoModel.KontaktiTyyp" Role="KontaktiTyyp" Multiplicity="1" />
+          <End Type="LoenguDemoModel.Kontakt" Role="Kontakt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KontaktiTyyp">
+              <PropertyRef Name="KontaktiTyypId" />
+            </Principal>
+            <Dependent Role="Kontakt">
+              <PropertyRef Name="KontaktiTyypId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LoenguDemoModelStoreContainer" CdmEntityContainer="LoenguDemoEntities">
+          <EntitySetMapping Name="Inimene">
+            <EntityTypeMapping TypeName="LoenguDemoModel.Inimene">
+              <MappingFragment StoreEntitySet="Inimene">
+                <ScalarProperty Name="InimeneID" ColumnName="InimeneID" />
+                <ScalarProperty Name="Eesnimi" ColumnName="Eesnimi" />
+                <ScalarProperty Name="Perenimi" ColumnName="Perenimi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kontakt">
+            <EntityTypeMapping TypeName="LoenguDemoModel.Kontakt">
+              <MappingFragment StoreEntitySet="Kontakt">
+                <ScalarProperty Name="Vaartus" ColumnName="Vaartus" />
+                <ScalarProperty Name="KontaktiTyypId" ColumnName="KontaktiTyypId" />
+                <ScalarProperty Name="InimeneId" ColumnName="InimeneId" />
+                <ScalarProperty Name="KontaktId" ColumnName="KontaktId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KontaktiTyyp">
+            <EntityTypeMapping TypeName="LoenguDemoModel.KontaktiTyyp">
+              <MappingFragment StoreEntitySet="KontaktiTyyp">
+                <ScalarProperty Name="Nimi" ColumnName="Nimi" />
+                <ScalarProperty Name="KontaktiTyypId" ColumnName="KontaktiTyypId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

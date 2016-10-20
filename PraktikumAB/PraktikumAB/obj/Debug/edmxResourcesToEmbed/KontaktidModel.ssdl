@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KontaktiRaamatModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Inimesed">
+    <Key>
+      <PropertyRef Name="InimeneId" />
+    </Key>
+    <Property Name="InimeneId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Eesnimi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Perenimi" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kontaktid">
+    <Key>
+      <PropertyRef Name="KontaktId" />
+    </Key>
+    <Property Name="KontaktId" Type="int" Nullable="false" />
+    <Property Name="InimeneId" Type="int" Nullable="false" />
+    <Property Name="KontaktiTyypId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Vaartus" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KontaktiTyyp">
+    <Key>
+      <PropertyRef Name="KontaktiTyypId" />
+    </Key>
+    <Property Name="KontaktiTyypId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nimi" Type="nvarchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Kontakt_ToInimesed">
+    <End Role="Inimesed" Type="Self.Inimesed" Multiplicity="1" />
+    <End Role="Kontaktid" Type="Self.Kontaktid" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inimesed">
+        <PropertyRef Name="InimeneId" />
+      </Principal>
+      <Dependent Role="Kontaktid">
+        <PropertyRef Name="InimeneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kontakt_ToKontaktiTyybid">
+    <End Role="KontaktiTyyp" Type="Self.KontaktiTyyp" Multiplicity="1" />
+    <End Role="Kontaktid" Type="Self.Kontaktid" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KontaktiTyyp">
+        <PropertyRef Name="KontaktiTyypId" />
+      </Principal>
+      <Dependent Role="Kontaktid">
+        <PropertyRef Name="KontaktiTyypId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="KontaktiRaamatModelStoreContainer">
+    <EntitySet Name="Inimesed" EntityType="Self.Inimesed" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kontaktid" EntityType="Self.Kontaktid" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KontaktiTyyp" EntityType="Self.KontaktiTyyp" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Kontakt_ToInimesed" Association="Self.FK_Kontakt_ToInimesed">
+      <End Role="Inimesed" EntitySet="Inimesed" />
+      <End Role="Kontaktid" EntitySet="Kontaktid" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kontakt_ToKontaktiTyybid" Association="Self.FK_Kontakt_ToKontaktiTyybid">
+      <End Role="KontaktiTyyp" EntitySet="KontaktiTyyp" />
+      <End Role="Kontaktid" EntitySet="Kontaktid" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

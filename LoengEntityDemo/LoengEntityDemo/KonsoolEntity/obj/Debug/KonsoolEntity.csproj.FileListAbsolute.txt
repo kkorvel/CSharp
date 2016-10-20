@@ -1,0 +1,13 @@
+C:\Users\mposka\Desktop\LoengEntityDemo\KonsoolEntity\bin\Debug\KonsoolEntity.exe.config
+C:\Users\mposka\Desktop\LoengEntityDemo\KonsoolEntity\bin\Debug\KonsoolEntity.exe
+C:\Users\mposka\Desktop\LoengEntityDemo\KonsoolEntity\bin\Debug\KonsoolEntity.pdb
+C:\Users\mposka\Desktop\LoengEntityDemo\KonsoolEntity\bin\Debug\EntityFramework.dll
+C:\Users\mposka\Desktop\LoengEntityDemo\KonsoolEntity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mposka\Desktop\LoengEntityDemo\KonsoolEntity\bin\Debug\EntityFramework.xml
+C:\Users\mposka\Desktop\LoengEntityDemo\KonsoolEntity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mposka\Desktop\LoengEntityDemo\KonsoolEntity\obj\Debug\KonsoolEntity.csprojResolveAssemblyReference.cache
+C:\Users\mposka\Desktop\LoengEntityDemo\KonsoolEntity\obj\Debug\KonsoolEntity.exe
+C:\Users\mposka\Desktop\LoengEntityDemo\KonsoolEntity\obj\Debug\KonsoolEntity.pdb
+C:\Users\kkorvel\Desktop\CSharp\LoengEntityDemo\LoengEntityDemo\KonsoolEntity\bin\Debug\KonsoolEntity.exe.config
+C:\Users\kkorvel\Desktop\CSharp\LoengEntityDemo\LoengEntityDemo\KonsoolEntity\obj\Debug\KonsoolEntity.exe
+C:\Users\kkorvel\Desktop\CSharp\LoengEntityDemo\LoengEntityDemo\KonsoolEntity\obj\Debug\KonsoolEntity.pdb
