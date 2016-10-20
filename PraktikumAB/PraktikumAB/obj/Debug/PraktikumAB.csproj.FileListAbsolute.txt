@@ -8,3 +8,13 @@ C:\Users\kkorvel\Desktop\CSharp\PraktikumAB\PraktikumAB\bin\Debug\EntityFramewor
 C:\Users\kkorvel\Desktop\CSharp\PraktikumAB\PraktikumAB\obj\Debug\PraktikumAB.csprojResolveAssemblyReference.cache
 C:\Users\kkorvel\Desktop\CSharp\PraktikumAB\PraktikumAB\obj\Debug\PraktikumAB.exe
 C:\Users\kkorvel\Desktop\CSharp\PraktikumAB\PraktikumAB\obj\Debug\PraktikumAB.pdb
+C:\Users\X555ln-\Documents\Visual Studio 2015\Projects\PraktikumAB\PraktikumAB\bin\Debug\PraktikumAB.exe.config
+C:\Users\X555ln-\Documents\Visual Studio 2015\Projects\PraktikumAB\PraktikumAB\obj\Debug\PraktikumAB.exe
+C:\Users\X555ln-\Documents\Visual Studio 2015\Projects\PraktikumAB\PraktikumAB\obj\Debug\PraktikumAB.pdb
+C:\Users\X555ln-\Documents\Visual Studio 2015\Projects\PraktikumAB\PraktikumAB\bin\Debug\PraktikumAB.exe
+C:\Users\X555ln-\Documents\Visual Studio 2015\Projects\PraktikumAB\PraktikumAB\bin\Debug\PraktikumAB.pdb
+C:\Users\X555ln-\Documents\Visual Studio 2015\Projects\PraktikumAB\PraktikumAB\bin\Debug\EntityFramework.dll
+C:\Users\X555ln-\Documents\Visual Studio 2015\Projects\PraktikumAB\PraktikumAB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\X555ln-\Documents\Visual Studio 2015\Projects\PraktikumAB\PraktikumAB\bin\Debug\EntityFramework.xml
+C:\Users\X555ln-\Documents\Visual Studio 2015\Projects\PraktikumAB\PraktikumAB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\X555ln-\Documents\Visual Studio 2015\Projects\PraktikumAB\PraktikumAB\obj\Debug\PraktikumAB.csprojResolveAssemblyReference.cache

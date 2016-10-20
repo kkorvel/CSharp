@@ -10,49 +10,59 @@ namespace PraktikumAB
     {
         static void Main(string[] args)
         {
-         //   leiaInimeneIdJargi(1);
-            for (int i = 0; i < 10; i++)
-            {
-                lisaKontaktiTyyp("skype");
-                
-            }
+            lisaBaasi("Peeter", "Pakiraam");
         }
 
-        static void lisaKontaktiTyyp(string nimi)
+        //          1) Loo meetod, mis kuvab inimesed andmebaasist
+
+        static void kuvaInimesedAndmebaasist()
         {
-            //nimi = nimi.ToLower();
             using (KontaktiRaamatEntities db = new KontaktiRaamatEntities())
             {
-                var tyyp = db.KontaktiTyyp.Where(x => x.Nimi.ToLower()==nimi.ToLower()).FirstOrDefault();
-
-                if (tyyp != null)
+                var inimesed = (from x in db.Inimesed select x).ToList();
+                var inimesed2 = db.Inimesed.ToList();
+                foreach (var inimene in inimesed)
                 {
-                    return;
+                    Console.WriteLine(inimene.Eesnimi + " " + inimene.Perenimi);
                 }
-                tyyp = new KontaktiTyyp()
-                {
-                    Nimi = nimi
-                };
-                db.KontaktiTyyp.Add(tyyp);
-            } 
+            }
         }
+        //          2) Loo meetod, mis otsib inimesi eesnime järgi ja sorteerib tulemuse kasvavalt eesnime järgi
 
-            //using(PraktikumAB db = new PraktikumAB())
-        static void lisaInimeseleKontaktAndmed(int inimeneId, int kontaktTyypId, string vaartus)
+        static List<Inimesed> otsiEesnimeJärgi(string eesnimi)
         {
             using (KontaktiRaamatEntities db = new KontaktiRaamatEntities())
             {
-                Kontaktid kontakt = new Kontaktid()
-                    InimeneId = inimeneId,
-                    KontaktiTyypId = kontaktTyypId,
-                    Vaartus = vaartus
-            };
-            
-            {
-                
+                var inimesed = (from x in db.Inimesed
+                                where x.Eesnimi.ToLower().Contains(eesnimi.ToLower())
+                                orderby x.Eesnimi ascending
+                                select x).ToList();
+
+                //OrderBy - ascending
+                //OrderByDescending - descending
+                var inimesed2 = db.Inimesed.Where(x => x.Eesnimi.ToLower().Contains(eesnimi.ToLower()))
+                    .OrderBy(x => x.Eesnimi).ToList();
+                return inimesed;
             }
         }
-            
-        }
-    }
 
+        static void lisaBaasi(string eesnimi, string perenimi)
+        {
+            using (KontaktiRaamatEntities db = new KontaktiRaamatEntities())
+            {
+                Inimesed uusInimene = new Inimesed()
+                {
+                    Eesnimi = eesnimi,
+                    Perenimi = perenimi
+                };
+
+                db.Inimesed.Add(uusInimene);
+
+                db.SaveChanges();
+            }
+        }
+        //          3) Loo meetod, mis võimaldab inimesi andmebaasi lisada
+
+        //1) Loo meetod, mis võimaldab kontaktitüüpi andmebaasi lisada
+    }
+}
